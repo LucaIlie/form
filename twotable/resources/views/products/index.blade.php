@@ -20,4 +20,46 @@
             @endforelse
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-6 m-auto">
+            <form action="{{route('product.store')}}" method="post">
+                @csrf
+                <div class="row">
+                    <div class="col-md-6 m-auto">
+                        <div class="form-group">
+                            <label>Nume:</label>
+                            <input type="text" name="nume" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-6 m-auto">
+                        <div class="form-group">
+                            <label>Producator:</label>
+                            <input type="text" name="producator" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-6 m-auto">
+                        <div class="form-group">
+                            <label>Pret:</label>
+                            <input type="text" name="pret" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-6 m-auto">
+                        <div class="form-group">
+                            <label>Cantitate:</label>
+                            <input type="text" name="cantitate" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-6 m-auto">
+                        <div class="form-group">
+                            <label>Categorie:</label>
+                            <select name="" id=""></select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Save" class="form-control">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
     @endsection
