@@ -2,7 +2,17 @@
 
 @section('title','Categories')
 @section('content')
-    <form action="{{route('')}}" method="post">
+    @forelse($categories as $category)
+
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{$category->nume}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{$category->sector}}</h6>
+            </div>
+        </div>
+    @empty
+    @endforelse
+    <form action="{{route('category.store')}}" method="post">
         @csrf
         <div class="row">
             <div class="col-md-6 m-auto">
